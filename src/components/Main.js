@@ -28,8 +28,7 @@ function Main(props) {
   React.useEffect(() => {
     api.getInitialCards()
       .then((res) => {
-        setCards(...cards, res);
-        console.log(cards);
+        setCards(res);
       })
       .catch((err) => {
         console.log(err);
