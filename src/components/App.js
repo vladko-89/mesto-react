@@ -41,9 +41,19 @@ function App() {
     <div className="page">
       <div className="container">
         <Header />
-        <Main onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onCardClick={handleCardClick} />
+        <Main onEditAvatar={handleEditAvatarClick}
+          onEditProfile={handleEditProfileClick}
+          onAddPlace={handleAddPlaceClick}
+          onCardClick={handleCardClick} />
+
         <Footer />
-        <PopupWithForm isOpen={isEditProfilePopupOpen} onClose={CloseAllPopups} className="popup popup_type_profile" name="profile" title="Редактировать профиль" buttonText="Сохранить">
+        <PopupWithForm
+          isOpen={isEditProfilePopupOpen}
+          onClose={CloseAllPopups}
+          className="popup popup_type_profile"
+          name="profile" title="Редактировать профиль"
+          buttonText="Сохранить">
+
           <ul className="popup__list">
             <li className="popup__item">
               <input className="popup__input popup__input_item_name" id="input_name" type="text" name="user" required
@@ -57,7 +67,13 @@ function App() {
             </li>
           </ul>
         </PopupWithForm>
-        <PopupWithForm className="popup popup_type_new-card" name="new-card" title="Новое место" buttonText="Создать" isOpen={isAddPlacePopupOpen} onClose={CloseAllPopups}>
+        <PopupWithForm className="popup popup_type_new-card"
+          name="new-card"
+          title="Новое место"
+          buttonText="Создать"
+          isOpen={isAddPlacePopupOpen}
+          onClose={CloseAllPopups}>
+
           <ul className="popup__list">
             <li className="popup__item">
               <input className="popup__input popup__input_item_title" type="text" name="name" id="input_title" required
@@ -71,11 +87,20 @@ function App() {
             </li>
           </ul>
         </PopupWithForm>
-        <PopupWithForm className="popup popup_type_card-delete" name="card-delete" title="Вы уверены?" buttonText="Да" />
+        <PopupWithForm className="popup popup_type_card-delete"
+          name="card-delete"
+          title="Вы уверены?"
+          buttonText="Да" />
 
         <ImagePopup card={selectedCard} onClose={CloseAllPopups} />
 
-        <PopupWithForm className="popup popup_type_avatar" name="avatar" title="Обновить аватар" buttonText="Сохранить" isOpen={isEditAvatarPopupOpen} onClose={CloseAllPopups}>
+        <PopupWithForm className="popup popup_type_avatar"
+          name="avatar"
+          title="Обновить аватар"
+          buttonText="Сохранить"
+          isOpen={isEditAvatarPopupOpen}
+          onClose={CloseAllPopups}>
+
           <ul className="popup__list">
             <li className="popup__item">
               <input className="popup__input popup__input_item_path" type="url" id="input_avatar" name="link" required

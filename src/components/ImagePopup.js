@@ -10,7 +10,7 @@ function ImagePopup(props) {
           <figcaption className="popup__sign">{`${props.card.isOpen ? props.card.el.name : ''}`}</figcaption>
         </figure>
         <button onClick={props.onClose} type="button" className="popup__button-close popup__button-close_modal_image"
-          aria-label="кнопка Закрыть"></button>
+          aria-label="кнопка Закрыть" />
       </div>
     </div>
   );

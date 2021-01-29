@@ -11,7 +11,7 @@ function PopupWithForm(props) {
           <button type="submit" className="popup__button-submit">{props.buttonText}</button>
         </form>
         <button onClick={props.onClose} type="button" className={`popup__button-close popup__button-close_modal_${props.name}`}
-          aria-label="кнопка Закрыть"></button>
+          aria-label="кнопка Закрыть" />
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 {
   "homepage": "http://vladko-89.github.io/mesto-react",
   "name": "react-mesto",
+  "author": "Vladislav Ukhanov <uhanovvg@yandex.ru>",
+  "description": "for project react-mesto",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

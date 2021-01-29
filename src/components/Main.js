@@ -55,12 +55,14 @@ function Main(props) {
             <p className="profile__specialization">{userDescription} </p>
           </div>
         </div>
-        <button className="profile__button-new-card" type="button" aria-label="Добавить новую карточку" onClick={props.onAddPlace}></button>
+        <button className="profile__button-new-card" type="button" aria-label="Добавить новую карточку" onClick={props.onAddPlace} />
       </section>
       <section className="grid-container" aria-label="Блок с карточками">
         <ul className="cards">
           {cards.map((card) => (
-            <Card key={card['_id']} card={card} onCardClick={props.onCardClick} />)
+            <Card key={card['_id']}
+              card={card}
+              onCardClick={props.onCardClick} />)
           )}
         </ul>
       </section>
