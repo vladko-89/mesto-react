@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2a4967a.chunk.css",
-    "main.js": "/static/js/main.e269bca2.chunk.js",
-    "main.js.map": "/static/js/main.e269bca2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7c5b2791.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7c5b2791.js.map",
-    "static/js/2.7ae74b66.chunk.js": "/static/js/2.7ae74b66.chunk.js",
-    "static/js/2.7ae74b66.chunk.js.map": "/static/js/2.7ae74b66.chunk.js.map",
-    "static/js/3.61cf97ce.chunk.js": "/static/js/3.61cf97ce.chunk.js",
-    "static/js/3.61cf97ce.chunk.js.map": "/static/js/3.61cf97ce.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.d2a4967a.chunk.css.map": "/static/css/main.d2a4967a.chunk.css.map",
-    "static/js/2.7ae74b66.chunk.js.LICENSE.txt": "/static/js/2.7ae74b66.chunk.js.LICENSE.txt",
-    "static/media/Vector.6c7bf054.svg": "/static/media/Vector.6c7bf054.svg",
-    "static/media/index.css": "/static/media/trash_transparent.19807f88.svg",
-    "static/media/logo.c2821b38.svg": "/static/media/logo.c2821b38.svg",
-    "static/media/vectorAva.a086f758.svg": "/static/media/vectorAva.a086f758.svg"
+    "main.css": "/%7Brepo-name%7D/static/css/main.55e0d467.chunk.css",
+    "main.js": "/%7Brepo-name%7D/static/js/main.be78c5ec.chunk.js",
+    "main.js.map": "/%7Brepo-name%7D/static/js/main.be78c5ec.chunk.js.map",
+    "runtime-main.js": "/%7Brepo-name%7D/static/js/runtime-main.403d2255.js",
+    "runtime-main.js.map": "/%7Brepo-name%7D/static/js/runtime-main.403d2255.js.map",
+    "static/js/2.7ae74b66.chunk.js": "/%7Brepo-name%7D/static/js/2.7ae74b66.chunk.js",
+    "static/js/2.7ae74b66.chunk.js.map": "/%7Brepo-name%7D/static/js/2.7ae74b66.chunk.js.map",
+    "static/js/3.61cf97ce.chunk.js": "/%7Brepo-name%7D/static/js/3.61cf97ce.chunk.js",
+    "static/js/3.61cf97ce.chunk.js.map": "/%7Brepo-name%7D/static/js/3.61cf97ce.chunk.js.map",
+    "index.html": "/%7Brepo-name%7D/index.html",
+    "static/css/main.55e0d467.chunk.css.map": "/%7Brepo-name%7D/static/css/main.55e0d467.chunk.css.map",
+    "static/js/2.7ae74b66.chunk.js.LICENSE.txt": "/%7Brepo-name%7D/static/js/2.7ae74b66.chunk.js.LICENSE.txt",
+    "static/media/Vector.6c7bf054.svg": "/%7Brepo-name%7D/static/media/Vector.6c7bf054.svg",
+    "static/media/index.css": "/%7Brepo-name%7D/static/media/trash_transparent.19807f88.svg",
+    "static/media/logo.c2821b38.svg": "/%7Brepo-name%7D/static/media/logo.c2821b38.svg",
+    "static/media/vectorAva.a086f758.svg": "/%7Brepo-name%7D/static/media/vectorAva.a086f758.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c5b2791.js",
+    "static/js/runtime-main.403d2255.js",
     "static/js/2.7ae74b66.chunk.js",
-    "static/css/main.d2a4967a.chunk.css",
-    "static/js/main.e269bca2.chunk.js"
+    "static/css/main.55e0d467.chunk.css",
+    "static/js/main.be78c5ec.chunk.js"
   ]
 }
