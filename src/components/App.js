@@ -5,7 +5,7 @@ import Footer from './Footer';
 import EditProfilePopup from './EditProfilePopup';
 import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
-import PopupWithForm from './PopupWithForm';
+import DeleteCardPopup from './DeleteCardPopup';
 import ImagePopup from './ImagePopup';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import api from '../utils/api.js';
@@ -18,6 +18,7 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
+  const [isDeleteCardPopupOpen, setIsDeleteCardPopupOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState({});
   const [cards, setCards] = React.useState([]);
 
@@ -64,6 +65,7 @@ function App() {
         return card._id !== newCard._id;
       })
       setCards(newCards);
+      closeAllPopups();
     })
       .catch((err) => {
         console.log(err);
@@ -86,11 +88,17 @@ function App() {
     setIsAddPlacePopupOpen(true);
   }
 
+  function handleDeleteCardClick(card) {
+    setIsDeleteCardPopupOpen(true);
+    setSelectedCard({ ...selectedCard, isOpen: false, el: card });
+  }
+
   //Закрываем модальные окна
   function closeAllPopups() {
     setIsEditProfilePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
     setIsAddPlacePopupOpen(false);
+    setIsDeleteCardPopupOpen(false);
     setSelectedCard({});
   }
 
@@ -141,7 +149,7 @@ function App() {
             onCardClick={handleCardClick}
             cards={cards}
             onCardLike={handleCardLike}
-            onCardDelete={handleCardDelete} />
+            onCardDelete={handleDeleteCardClick} />
 
           <Footer />
           <EditProfilePopup isOpen={isEditProfilePopupOpen}
@@ -153,10 +161,12 @@ function App() {
             onClose={closeAllPopups}
             onAddPlace={handleAddCard} />
 
-          <PopupWithForm className="popup popup_type_card-delete"
-            name="card-delete"
-            title="Вы уверены?"
-            buttonText="Да" />
+          <DeleteCardPopup
+            card={selectedCard}
+            isOpen={isDeleteCardPopupOpen}
+            onClose={closeAllPopups}
+            onDeleteCard={handleCardDelete}
+          />
 
           <ImagePopup card={selectedCard}
             onClose={closeAllPopups} />
