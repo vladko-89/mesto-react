@@ -8,7 +8,7 @@ import AddPlacePopup from './AddPlacePopup';
 import PopupWithForm from './PopupWithForm';
 import ImagePopup from './ImagePopup';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
-import api from '../utils/Api';
+import api from '../utils/api';
 
 
 
