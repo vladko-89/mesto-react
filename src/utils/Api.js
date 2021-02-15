@@ -30,8 +30,8 @@ class Api {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: data.user,
-        about: data.specialization
+        name: data.name,
+        about: data.about
       })
     })
       .then((res) => {
@@ -139,22 +139,61 @@ class Api {
       })
   }
 
-  deleteLike(cardID) {
-    return fetch(`${this._base}cards/likes/${cardID}`, {
-      method: 'DELETE',
-      headers: {
-        authorization: this._token,
-        'Content-type': 'application/json'
-      }
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        else {
-          return Promise.reject(`Что-то пошло не так: ${res.status}`);
+  deleteLike(cardID, status) {
+    if (status) {
+      return fetch(`${this._base}cards/likes/${cardID}`, {
+        method: 'DELETE',
+        headers: {
+          authorization: this._token,
+          'Content-type': 'application/json'
         }
       })
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          else {
+            return Promise.reject(`Что-то пошло не так: ${res.status}`);
+          }
+        })
+    }
+  }
+
+  changeLikeCardStatus(cardID, status) {
+    if (status) {
+      return fetch(`${this._base}cards/likes/${cardID}`, {
+        method: 'PUT',
+        headers: {
+          authorization: this._token,
+          'Content-type': 'application/json'
+        }
+      })
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          else {
+            return Promise.reject(`Что-то пошло не так: ${res.status}`);
+          }
+        })
+    }
+    else {
+      return fetch(`${this._base}cards/likes/${cardID}`, {
+        method: 'DELETE',
+        headers: {
+          authorization: this._token,
+          'Content-type': 'application/json'
+        }
+      })
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          else {
+            return Promise.reject(`Что-то пошло не так: ${res.status}`);
+          }
+        })
+    }
   }
 }
 

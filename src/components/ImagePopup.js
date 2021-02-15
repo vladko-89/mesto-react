@@ -1,7 +1,6 @@
 import React from 'react';
 
 function ImagePopup(props) {
-  console.log(props);
   return (
     <div className={`popup popup_type_image ${props.card.isOpen ? 'popup_show' : false}`}>
       <div className={`popup__body popup__body_modal_image ${props.card.isOpen ? 'popup__body_slice' : false}`}>
